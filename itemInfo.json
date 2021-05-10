@@ -1,0 +1,35 @@
+{
+    "displayProperties": {
+        "description": "",
+        "name": "No Love Lost",
+        "icon": "/common/destiny2_content/icons/b73246bedf8b4237d5cd04909be64688.jpg",
+        "highResIcon": "/common/destiny2_content/icons/bdfd6ac54f0861b1ea74529a5db02554.jpg",
+        "hasIcon": true
+    },
+    "scope": 0,
+    "sourceString": "Source: Rock Bottom.",
+    "sourceHash": 1692165595,
+    "itemHash": 296637832,
+    "acquisitionInfo": {
+        "acquireMaterialRequirementHash": 4032750400,
+        "runOnlyAcquisitionRewardSite": false
+    },
+    "stateInfo": {
+        "requirements": {
+            "entitlementUnavailableMessage": ""
+        }
+    },
+    "presentationNodeType": 1,
+    "traitIds": [],
+    "traitHashes": [],
+    "parentNodeHashes": [
+        2594170658,
+        859539038,
+        3816074171,
+        241679837
+    ],
+    "hash": 3574313939,
+    "index": 2903,
+    "redacted": false,
+    "blacklisted": false
+}
