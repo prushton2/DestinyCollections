@@ -31,8 +31,8 @@ for i in collectibles:
     itemName = json.loads(res.text)['Response']['displayProperties']['name']
     Dictionary[str(i)] = itemName
     
-    if(not os.path.exists(f"C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\hashes\\{i}.json")):
-        theFile = open(f"C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\hashes\\{i}.json", "x")
+    if(not os.path.exists(os.path.realpath(os.path.join(os.path.dirname(__file__), f"hashes\\{i}.json")))):
+        theFile = open(os.path.realpath(os.path.join(os.path.dirname(__file__), f"hashes\\{i}.json")), "x")
         json.dump(json.loads(res.text)["Response"], theFile)
         theFile.close()
 

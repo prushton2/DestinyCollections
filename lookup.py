@@ -1,6 +1,9 @@
+import os
+
+
 jsm = __import__("JsonManager")
-dictionary = jsm.JsonManager("C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\dict.json")
-output = jsm.JsonManager("C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\itemInfo.json")
+dictionary = jsm.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "dict.json")))
+output = jsm.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "itemInfo.json")))
 
 def lookup(json_object, name):
     for i in json_object:
@@ -14,7 +17,7 @@ itemName = "No Love Lost"
 id = lookup(dictionary.load(), itemName)
 print(f'{itemName}: {id}')
 
-hashes = jsm.JsonManager(f"C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\hashes\\{id}.json")
+hashes = jsm.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), f"hashes\\{id}.json")))
 
 output.save(hashes.load())
 print(f"saved")
