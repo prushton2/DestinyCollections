@@ -17,6 +17,7 @@ Create a file called ```config.json``` in the root directory and populate it lik
 * Open up ```itemInfo.json``` to see the API info of the item
 
 ## How to recompile the JSON
-Run the ```compile.py``` file and leave it sit for a while<br>
+* Change the ```if(True):``` to ```if(False):``` (This is here to prevent an accidental recompile)
+* Run the ```compile.py``` file and leave it sit for a while<br>
 This code isnt very efficient, as it iterates through items that have already been saved in the dictionary.
 
