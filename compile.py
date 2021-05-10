@@ -5,6 +5,7 @@ import os
 
 jsonmanager = __import__("JsonManager")
 
+configjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "config.json")))
 dictjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "dict.json")))
 collections = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "collections.json")))
 
@@ -12,7 +13,7 @@ if(True):
     exit()
 
 root_url = "https://www.bungie.net/Platform"
-HEADERS = dictjson.load()["HEADERS"]
+HEADERS = configjson.load()["HEADERS"]
 
 collectibles = collections.load()['Response']['profileCollectibles']['data']['collectibles']
 
