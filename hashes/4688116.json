@@ -1,0 +1,42 @@
+{
+    "displayProperties": {
+        "description": "",
+        "name": "Solar Resistance",
+        "icon": "/common/destiny2_content/icons/c0534a2920be982cc4712ecc9026abf0.png",
+        "iconSequences": [
+            {
+                "frames": [
+                    "/common/destiny2_content/icons/c0534a2920be982cc4712ecc9026abf0.png"
+                ]
+            },
+            {
+                "frames": [
+                    "/common/destiny2_content/icons/50894036992a16d425577c5742c79908.png"
+                ]
+            }
+        ],
+        "hasIcon": true
+    },
+    "scope": 0,
+    "sourceString": "Source: Unlocked by default.",
+    "sourceHash": 2130345705,
+    "itemHash": 1429600943,
+    "acquisitionInfo": {
+        "runOnlyAcquisitionRewardSite": false
+    },
+    "stateInfo": {
+        "requirements": {
+            "entitlementUnavailableMessage": ""
+        }
+    },
+    "presentationNodeType": 1,
+    "traitIds": [],
+    "traitHashes": [],
+    "parentNodeHashes": [
+        4163848934
+    ],
+    "hash": 4688116,
+    "index": 2968,
+    "redacted": false,
+    "blacklisted": false
+}
