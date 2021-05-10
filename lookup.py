@@ -7,6 +7,7 @@ def lookup(json_object, name):
         if json_object[i] == name:
             return i
 
+#    HERE    #
 itemName = "No Love Lost"
 
 

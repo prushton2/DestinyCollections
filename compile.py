@@ -5,15 +5,16 @@ import os
 
 jsonmanager = __import__("JsonManager")
 
+# configjson = jsonmanager.JsonManager("C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\dict.json")
 
-dictjson = jsonmanager.JsonManager("C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\dict.json")
-collections = jsonmanager.JsonManager("C:\\Users\\Peter\\Documents\\code\\py\\Bungie net api\\dictionary\\collections.json")
+dictjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "dict.json")))
+collections = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "collections.json")))
 
 if(True):
     exit()
 
 root_url = "https://www.bungie.net/Platform"
-HEADERS = {"X-API-Key" : "d16ea396820e48e7bfec254ab512eec4"}
+HEADERS = dictjson.load()["HEADERS"]
 
 collectibles = collections.load()['Response']['profileCollectibles']['data']['collectibles']
 
