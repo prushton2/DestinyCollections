@@ -6,7 +6,7 @@ Create a file called ```config.json``` in the root directory and populate it lik
 ```
 {
     "HEADERS": {
-        "X-API-Key" : "<Bungie.net Api Key Here"
+        "X-API-Key" : "<Bungie.net Api Key Here>"
     }
 }
 ```
