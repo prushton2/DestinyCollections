@@ -9,7 +9,7 @@ configjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirna
 dictjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "dict.json")))
 collections = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "collections.json")))
 
-if(True):
+if(False):
     exit()
 
 root_url = "https://www.bungie.net/Platform"
@@ -28,9 +28,13 @@ for i in collectibles:
     url = f"/Destiny2/Manifest/DestinyCollectibleDefinition/{i}"
     res = requests.get(root_url+url, headers=HEADERS)
     
-    itemName = json.loads(res.text)['Response']['displayProperties']['name']
+    try:
+        itemName = json.loads(res.text)['Response']['displayProperties']['name']
+    except:
+        itemName = "Error Fetching Name"
     Dictionary[str(i)] = itemName
     
+
     if(not os.path.exists(os.path.realpath(os.path.join(os.path.dirname(__file__), f"hashes\\{i}.json")))):
         theFile = open(os.path.realpath(os.path.join(os.path.dirname(__file__), f"hashes\\{i}.json")), "x")
         json.dump(json.loads(res.text)["Response"], theFile)
