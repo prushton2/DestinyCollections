@@ -14,6 +14,15 @@ if(False):
 
 root_url = "https://www.bungie.net/Platform"
 HEADERS = configjson.load()["HEADERS"]
+accountInfo = configjson.load()["Account"]
+
+membershipType = accountInfo["membershipType"] #  I tried to put the accountInfo variable into the fstring directly, but got errors. This somehow works, i dont know why
+destinyMembershipId = accountInfo["destinyMembershipId"]
+
+
+url = f"/Destiny2/{membershipType}/Profile/{destinyMembershipId}/?components=800"
+res = requests.get(root_url+url, headers=HEADERS)
+collections.save(json.loads(res.text))
 
 collectibles = collections.load()['Response']['profileCollectibles']['data']['collectibles']
 
