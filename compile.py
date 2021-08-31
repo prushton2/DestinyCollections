@@ -9,7 +9,7 @@ configjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirna
 dictjson = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "dict.json")))
 collections = jsonmanager.JsonManager(os.path.realpath(os.path.join(os.path.dirname(__file__), "collections.json")))
 
-if(False):
+if(True):
     exit()
 
 root_url = "https://www.bungie.net/Platform"
